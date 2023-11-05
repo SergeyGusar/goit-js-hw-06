@@ -14,11 +14,14 @@ const images = [
 ];
 
 const galleryList = document.querySelector(".gallery");
+galleryList.style.display = "flex";
+galleryList.style.flexDirection = "column";
+galleryList.style.gap = "50px";
 
 const galleryItems = images.map((image) => {
   return `
     <li class="gallery-item">
-      <img src="${image.url}" alt="${image.alt}" class="gallery-image">
+      <img src="${image.url}" alt="${image.alt}" class="gallery-image" width = "300">
     </li>
   `;
 });
